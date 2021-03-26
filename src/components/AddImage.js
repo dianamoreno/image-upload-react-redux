@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {selectFiles, uploadImages} from "../actions/upload"
 
 
-let AddImage = ({ progressBar, dispatch }) => {
+let AddImg = ({ progressBar, dispatch }) => {
   let input
 
   return (
@@ -43,9 +43,9 @@ const mapStateToProps = (state) => {
     }
 }
   
-const AddImages = connect(
+const AddImage = connect(
     mapStateToProps
-)(AddImage)
+)(AddImg)
 
 
-export default AddImages;
+export default AddImage;

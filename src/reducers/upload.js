@@ -1,6 +1,6 @@
 //metodo que valida los actions para ejecutar la acción
 // correspondiente según la interaccion del usuario con la página
-const uploadImage = (state = {}, action) => {
+const upload = (state = {}, action) => {
 
     switch (action.type) {
         case 'SELECCCIONAR_ARCHIVOS':
@@ -57,7 +57,7 @@ const uploadImage = (state = {}, action) => {
     }
 };
 
-export default uploadImage;
+export default upload;
 
 //metodo que evalua si todos las imagenes seleccionadas son de tipo JPG
 const imageTypeValidation = (files, imageTypeAccepted) => {
@@ -71,7 +71,7 @@ const imageTypeValidation = (files, imageTypeAccepted) => {
     return true;
 }
 
-//método que recorre la lista de imagenes para mostrar la barra del progreso de carga de cada una
+//metodo que recorre la lista de imagenes para mostrar la barra del progreso de carga de cada una
 const uploadImages = (state = {}, action) => {
 
     const selectedFiles = state.selectedImages
